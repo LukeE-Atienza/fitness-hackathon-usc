@@ -1,11 +1,6 @@
 import pandas as pd
 import requests 
-from flask import Flask
 
-
-app = Flask(__name__)
-
-@app.route('/')
 def food_Call(food_query, grams):
     # Step 1: Search for a product by name and retrieve the first matching product's code
     search_url = f"https://world.openfoodfacts.org/cgi/search.pl?search_terms={food_query}&search_simple=1&action=process&json=1"
@@ -143,4 +138,3 @@ def main():
 
 
 main()
-

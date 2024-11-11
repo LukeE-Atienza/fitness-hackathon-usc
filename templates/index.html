@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <h1>Welcome to the Fitness App</h1>
+
+    <!-- Food input form section -->
+    <div id="foodInputSection">
+        <h2>Enter Food Information</h2>
+        <input type="text" id="foodQuery" placeholder="Enter food item" />
+        <input type="number" id="foodGrams" placeholder="Grams" />
+        <button onclick="getFoodData()">Get Food Data</button>
+
+        <div id="foodDataResult"></div> <!-- Where the food data will be displayed -->
+    </div>
+
+    <!-- Exercise input form section -->
+    <div id="exerciseInputSection">
+        <h2>Enter Exercise Information</h2>
+        <input type="number" id="age" placeholder="Age" />
+        <input type="number" id="height" placeholder="Height (in inches)" />
+        <input type="number" id="weight" placeholder="Weight (in pounds)" />
+        <select id="gender">
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+        </select>
+        <input type="number" id="distance" placeholder="Distance (miles)" />
+        <input type="number" id="difficulty" placeholder="Terrain Difficulty (1-10)" />
+        <button onclick="calculateCaloriesBurned()">Calculate Calories Burned</button>
+
+        <div id="exerciseDataResult"></div> <!-- Where the exercise data will be displayed -->
+    </div>
+</body>
+</html>
